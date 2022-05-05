@@ -7,6 +7,7 @@ import { WeightComponent } from './weight/weight.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar/sidebar.component';
+// import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SidebarComponent } from './components/sidebar/sidebar/sidebar.component
     WeightComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    // ComponentsModule,
   ],
   imports: [
     BrowserModule,
