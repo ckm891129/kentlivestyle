@@ -1,10 +1,50 @@
-<p>weight-calc works!</p>
-<h1>Ideal weight</h1>
+<!-- <p>weight-calc works!</p>s -->
+<h3>Ideal weight</h3>
+<br />
+<table>
+    <thead>
+        <!-- <tr></tr> -->
 
-<label for="gender"> Select you gender</label>
-<select name="gender">
-    <option value="none" selected>Gender</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-    <option value="other">other</option>
-</select>
+    </thead>
+    <tbody>
+        <!-- <tr>
+            <td>Current Weight(kg)</td>
+            <td>
+                <input type="text" id="kg"  [ngModel]="weight" (change)="setvalue()" /> -->
+                <!-- (ngModelChange)="valuechange($event)" /> -->
+            <!-- </td>
+        </tr> -->
+        <tr>
+            <td>height(cm)</td>
+            <td>
+                <input type="text" id="cm" [ngModel]="" (change)="setvalue()" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gentle</td>
+            <td>
+                <!-- <span class="fa-stack fa-2x" style="--fa-inverse: #1da1f2;" id="male">
+
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-male fa-stack-1x fa-inverse"></i>
+                </span>
+                
+                <span class="fa-stack fa-2x" style="--fa-inverse: #1da1f2;" id="female">
+                
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-female fa-stack-1x fa-inverse"></i>
+                </span> -->
+                <select name="gender" [ngModel]="" (change)="setvalue()" >
+                    <option value="none" selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            your ideal weight is:
+        </tr>
+    </tbody>
+</table>

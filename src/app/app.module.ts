@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms';
 
 // For Material Navigation
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -16,9 +17,6 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     routingComponents,
-    
-    // TestimonialComponent,
-    //  WeightCalcComponent
   ],
   imports: [
     AppRoutingModule,
@@ -28,7 +26,8 @@ import { AppComponent } from './app.component';
      MatSidenavModule,
      MatButtonModule,
      MatIconModule,
-     MatDividerModule
+     MatDividerModule,
+     FormsModule
     ],
   bootstrap: [AppComponent],
   providers: []
