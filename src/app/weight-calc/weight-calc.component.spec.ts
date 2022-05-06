@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
+import { WeightCalcComponent } from './weight-calc.component';
 
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('WeightCalcComponent', () => {
+  let component: WeightCalcComponent;
+  let fixture: ComponentFixture<WeightCalcComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppComponent ]
+      declarations: [ WeightCalcComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(WeightCalcComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
