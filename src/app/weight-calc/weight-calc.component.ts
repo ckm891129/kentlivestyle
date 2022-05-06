@@ -5,40 +5,32 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './weight-calc.component.html',
   styleUrls: ['./weight-calc.component.css']
 })
+
 export class WeightCalcComponent implements OnInit {
+  // let idealWeight:number = 0; 
   // let weight: number ;
-  
-  weight = (document.getElementById('weight')) as HTMLInputElement | null;
-  // weight: number = 0
-  // height: number = 0
-  // gender: string = ''
+  idealWeight: number = NaN;
+
+  // weight = (document.getElementById('weight')) as HTMLInputElement | null;
+  weight: number = 0
+  height: number = 0
+  gender: string = ''
 
   ngOnInit() {
     // console.log('help')
   }
- 
 
-  // const value = input?.value;
-  // console.log(value) // 👉️ "Initial value"
+  getValue(val: any) {
+    console.warn(val)
+  }
 
+  // 👉️ calculate your ideal weight
+  calculateWeight() {
+    this.weight = parseFloat((<HTMLInputElement>document.getElementById("weight")).value);
+    this.height = parseFloat((<HTMLInputElement>document.getElementById("height")).value);
+    this.gender = (<HTMLSelectElement>document.getElementById('gender')).value;
+    console.log('weight ->', this.weight + 'height ->', this.height + 'gender ->', this.gender)
 
-
-
-  setvalue() {
-    // mymodel = newValue;
-    // this.weight = (<HTMLInputElement>document.getElementById("weight")).value;
-    // this.height = 160
-    // this.gender = 'female'
-
-    // let idealWeight = 0.00
-    // if (this.gender ==='female'){
-    //   idealWeight = (this.height - 100) * 0.8
-    //   console.log(idealWeight)
-
-    // } else {
-    //   idealWeight = (this.height - 100) * 0.9
-    //   console.log(idealWeight)
-
-    // }
+    this.idealWeight = (this.gender === 'male') ? (this.height - 100) * 0.9 : (this.height - 100) * 0.8
   }
 }
